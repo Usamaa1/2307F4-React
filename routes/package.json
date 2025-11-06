@@ -1,27 +1,23 @@
 {
-  "name": "first-project",
+  "name": "routes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@fontsource/roboto": "^5.2.8",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
-    "@mui/icons-material": "^7.3.4",
-    "@mui/material": "^7.3.4",
     "@tailwindcss/vite": "^4.1.16",
     "bootstrap": "^5.3.8",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.1",
+    "react-router": "^7.9.5",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
