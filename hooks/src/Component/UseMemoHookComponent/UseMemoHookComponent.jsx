@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react'
 
-export const UseMemoHookComponent = () => {
+ const UseMemoHookComponent = () => {
     const [number, setNumber] = useState(10);
 
 
@@ -29,3 +29,4 @@ export const UseMemoHookComponent = () => {
         </>
     )
 }
+export default UseMemoHookComponent;

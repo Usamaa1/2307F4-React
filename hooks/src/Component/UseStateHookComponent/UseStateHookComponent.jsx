@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const UseStateHookComponent = () => {
+ const UseStateHookComponent = () => {
 
     // let a = 23;
 
@@ -29,3 +29,4 @@ export const UseStateHookComponent = () => {
 
     )
 }
+export default UseStateHookComponent;

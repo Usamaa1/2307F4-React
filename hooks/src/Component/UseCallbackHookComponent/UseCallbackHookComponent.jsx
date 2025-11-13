@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 
-export const UseCallbackHookComponent = () => {
+const UseCallbackHookComponent = () => {
 
 
     const [count, setCount] = useState(0);
@@ -22,3 +22,6 @@ export const UseCallbackHookComponent = () => {
     </>
   )
 }
+
+
+export default UseCallbackHookComponent

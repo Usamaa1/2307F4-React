@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-export const UseRefHookComponent = () => {
+ const UseRefHookComponent = () => {
 
 
     const emailRef = useRef();
@@ -33,3 +33,4 @@ export const UseRefHookComponent = () => {
         </>
     )
 }
+export default UseRefHookComponent
