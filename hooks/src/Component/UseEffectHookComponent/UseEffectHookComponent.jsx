@@ -10,10 +10,10 @@ import axios from 'axios';
 
     const incrementHandler = () => setCount1(count1 + 1);
     const decrementHandler = () => setCount1(count1 - 1);
+    let isloading = true;
 
     async function getPosts(id) {
         try {
-            isloading = true;
             const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
 
           if(response){

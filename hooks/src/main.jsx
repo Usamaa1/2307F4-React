@@ -19,6 +19,7 @@ const UseRefHookComponent = lazy(()=>import('./Component/UseRefHookComponent/Use
 const UseCallbackHookComponent = lazy(()=>import('./Component/UseCallbackHookComponent/UseCallbackHookComponent.jsx'));
 const UseMemoHookComponent = lazy(()=>import('./Component/UseMemoHookComponent/UseMemoHookComponent.jsx'));
 const UseEffectHookComponent = lazy(()=>import('./Component/UseEffectHookComponent/UseEffectHookComponent.jsx'));
+const FormValidationByReactFormHook = lazy(()=>import('./Component/FormValidationByReactFormHook/FormValidationByReactFormHook.jsx'))
 
 
 
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
       {
         path: '/useEffect',
         Component: UseEffectHookComponent
+      }
+      ,
+      {
+        path: '/formValidation',
+        Component: FormValidationByReactFormHook
       }
     ]
   },

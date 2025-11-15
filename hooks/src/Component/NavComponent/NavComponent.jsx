@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Use Callback', href: '/useCallBack', current: false },
   { name: 'Use Memo', href: '/useMemo', current: false },
   { name: 'Use Effect', href: '/useEffect', current: false },
+  { name: 'Form Validation', href: '/formValidation', current: false },
 ]
 
 function classNames(...classes) {
