@@ -1,6 +1,8 @@
 import express from 'express'
 import employeeRoutes from './Routes/employeeRoutes.mjs'
-import {db} from './connection/connection.mjs'
+// import {db} from './connection/connection.mjs'
+import { main } from './connection/mongooseConnection.mjs'
+
 const app = express()
 const port = 3000
 
