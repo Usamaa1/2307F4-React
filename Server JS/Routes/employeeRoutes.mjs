@@ -1,5 +1,5 @@
 import express from 'express'
-import { getEmployee } from '../controllers/employeeController.mjs';
+import { addEmployee, deleteEmployee, getEmployee, searchEmployee, updateEmployee } from '../controllers/employeeController.mjs';
 
 const employeeRoutes = express.Router();
 
@@ -17,5 +17,9 @@ const employeeRoutes = express.Router();
 
 
 employeeRoutes.get('/employee',getEmployee)
+employeeRoutes.get('/employeeSearch/:query',searchEmployee)
+employeeRoutes.post('/addEmployee',addEmployee);
+employeeRoutes.delete('/deleteEmployee/:delId',deleteEmployee);
+employeeRoutes.put('/updateEmployee/:upId',updateEmployee);
 
 export default employeeRoutes;
