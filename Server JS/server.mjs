@@ -2,6 +2,7 @@ import express from 'express'
 import employeeRoutes from './Routes/employeeRoutes.mjs'
 // import {db} from './connection/connection.mjs'
 import { main } from './connection/mongooseConnection.mjs'
+import userRoutes from './Routes/userRoutes.mjs'
 
 const app = express()
 const port = 3000
@@ -73,6 +74,7 @@ app.post('/product', (req, res) => {
 
 
 app.use('/api/v1',employeeRoutes);
+app.use('/api/v1',userRoutes);
 
 
 
