@@ -62,13 +62,18 @@ export const userLogin = async (req,res)=>{
 
          let userToken = jwt.sign({id: ifUser._id, userName: ifUser.userName, email: ifUser.email},process.env.JWT_SECRET_KEY,{expiresIn: '1h'})
 
-         res.send({userToken})
+
+         res.cookie('token',userToken,{maxAge: 3600000, httpOnly: true, secure: true})
+
+
+        //  res.send({userToken})
+        res.send('Login Successfull')
 
 
 
         
     } catch (error) {
-        
+        console.log(error)
     }
 }
 
