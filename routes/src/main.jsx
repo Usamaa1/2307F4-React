@@ -9,7 +9,10 @@ import App from './App.jsx'
 import { HomeComponent } from './Components/HomeComponent/HomeComponent.jsx';
 import { ContactComponent } from './Components/ContactComponent/ContactComponent.jsx';
 import { AboutComponent } from './Components/AboutComponent/AboutComponent.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginComponent from './Components/LoginComponent/LoginComponent.jsx';
+import RegisterComponent from './Components/RegisterComponent/RegisterComponent.jsx';
+import { UserContext } from './Context/UserContext.jsx';
 
 
 
@@ -32,12 +35,23 @@ const router = createBrowserRouter([
       }
     ]
 
+  },
+  {
+    path: '/login',
+    Component: LoginComponent
+  }
+  ,
+  {
+    path: '/signup',
+    Component: RegisterComponent
   }
 ]);
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} ></RouterProvider>
+    <UserContext>
+      <RouterProvider router={router} ></RouterProvider>
+    </UserContext>
   </StrictMode>,
 )

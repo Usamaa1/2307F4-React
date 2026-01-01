@@ -3,11 +3,19 @@ import employeeRoutes from './Routes/employeeRoutes.mjs'
 // import {db} from './connection/connection.mjs'
 import { main } from './connection/mongooseConnection.mjs'
 import userRoutes from './Routes/userRoutes.mjs'
+import cors from 'cors'
+import cookieParser from 'cookie-parser'
+
 
 const app = express()
 const port = 3000
-
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true, 
+  allowedHeaders: ['Content-Type', 'Authorization'] 
+}));
 app.use(express.json())
+app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {

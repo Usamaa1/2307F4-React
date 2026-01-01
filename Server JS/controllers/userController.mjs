@@ -77,7 +77,7 @@ export const userLogin = async (req,res)=>{
 
 
 
-export const dashboard = (req,res)=>{
+export const profile = (req,res)=>{
 
     res.send({
         users: req.user,

@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Button } from 'react-bootstrap';
 // import Card from 'react-bootstrap/Card';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import './index.css'
 import { App } from './App';
 import Navbar from './Navbar';
