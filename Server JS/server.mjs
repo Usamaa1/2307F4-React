@@ -5,6 +5,7 @@ import { main } from './connection/mongooseConnection.mjs'
 import userRoutes from './Routes/userRoutes.mjs'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
+import mailRoutes from './Routes/mailRoutes.mjs'
 
 
 const app = express()
@@ -83,7 +84,7 @@ app.post('/product', (req, res) => {
 
 app.use('/api/v1',employeeRoutes);
 app.use('/api/v1',userRoutes);
-
+app.use('/api/v1',mailRoutes)
 
 
 app.listen(port, () => {
