@@ -6,6 +6,7 @@ import userRoutes from './Routes/userRoutes.mjs'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import mailRoutes from './Routes/mailRoutes.mjs'
+import imageRoutes from './Routes/imageRoutes.mjs'
 
 
 const app = express()
@@ -84,7 +85,8 @@ app.post('/product', (req, res) => {
 
 app.use('/api/v1',employeeRoutes);
 app.use('/api/v1',userRoutes);
-app.use('/api/v1',mailRoutes)
+app.use('/api/v1',mailRoutes);
+app.use('/api/v1',imageRoutes);
 
 
 app.listen(port, () => {
