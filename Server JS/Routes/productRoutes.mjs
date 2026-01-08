@@ -7,12 +7,12 @@ import {
   createProduct,
 } from "../controllers/productController.mjs";
 
-const router = express.Router();
+const productRoutes = express.Router();
 
-router.post("/products/create", createProduct);
-router.get("/products/filter", filterProducts);
-router.get("/products/search", searchProducts);
-router.get("/products/sort", sortProducts);
-router.get("/productsWithCategory", productsWithCategory);
+productRoutes.post("/products/create", createProduct);
+productRoutes.get("/products/filter", filterProducts);
+productRoutes.get("/products/search", searchProducts);
+productRoutes.get("/products/sort", sortProducts);
+productRoutes.get("/productsWithCategory", productsWithCategory);
 
-export default router;
+export default productRoutes;
