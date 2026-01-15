@@ -1,4 +1,3 @@
-import { message } from "statuses";
 import Category from "../models/Category.mjs";
 
 
@@ -8,13 +7,13 @@ export const AddCategory = async (req,res)=>{
     try {
         const {name} = req.body;
 
-        await Category.create(name);
+        await Category.create({name});
         res.send({message: "Category added Successfully!"})
 
 
 
 
-    } catch (error) {
+    } catch (err) {
          if (err.name === "ValidationError") {
       const messages = Object.values(err.errors).map((val) => val.message);
       return res.status(400).send({ error: messages });

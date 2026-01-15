@@ -43,7 +43,7 @@ export const filterProducts = async (req, res) => {
       if (minPrice) filter.price.$gte = Number(minPrice);
       if (maxPrice) filter.price.$lte = Number(maxPrice);
     }
-
+    console.log(filter);
     const products = await Product.find(filter);
     res.send(products);
   } catch (err) {
